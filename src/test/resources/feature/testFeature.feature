@@ -2,7 +2,14 @@ Feature: MyAccount-Login Feature
   Description: This feature will test a Login feature
 
   #Simple login without parameters
-  Scenario: Log-in with valid username and password
-    Given Open the browser
-   When Enter the URL
-   Then User verifies the page
+  Scenario Outline: Log-in with valid username and password
+  
+    Given Open the browser   
+    When Enter the URL "<url>
+    Then User verifies the object on page
+    |FirstName|LastName|Phone|Email|Address
+   ||||
+
+    Examples: 
+      | url                  |
+      |http://newtours.demoaut.com/ |

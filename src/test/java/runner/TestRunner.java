@@ -10,6 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		features="src/test/resources/feature",
 		glue="cucumberStepFile",
 		plugin = {"html:target/cucumber-html-report", "json:target/cucumber-json-report.json" },
+		dryRun=true,
         monochrome = true
         )
 public class TestRunner {
